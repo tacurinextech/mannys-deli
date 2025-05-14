@@ -98,7 +98,7 @@ export default function ContactPage() {
                 <p className="font-medium">Important Note:</p>
                 <p>
                   Please do not use this contact form to place food orders. For immediate service, call us directly at
-                  {config.COMPANY.PHONE} or use the "Order Online" button to order through Uber Eats...
+                  {config.COMPANY.PHONE} or use the "Order Online" button to order through Uber Eats.
                 </p>
               </div>
             </div>
