@@ -14,7 +14,7 @@ export default function Home() {
         <div className="container mx-auto px-4 z-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">{`Welcome to ${config.COMPANY.NAME}`}</h1>
           <p className="text-xl md:text-2xl mb-8">
-            Experience the flavors of Latin America
+            Experience the flavors of Latin America, United States, and more
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -43,7 +43,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
                   <Image
                     src="/placeholder.svg?height=400&width=600"
-                    alt="Ecuadorian Breakfast"
+                    alt="Breakfast"
                     width={600}
                     height={400}
                     className="object-cover h-full w-full"
@@ -51,11 +51,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Ecuadorian Breakfast</h3>
+                <h3 className="text-xl font-semibold mb-2">Traditional Breakfast</h3>
                 <p className="text-gray-600 mb-4">
-                  Traditional tigrillo with plantains, eggs, and cheese served with fresh coffee.
+                  {/* Traditional tigrillo with plantains, eggs, and cheese served with fresh coffee. */}
+                  Hearty, homestyle breakfasts cooked just the way you remember—always delicious, always satisfying.
                 </p>
-                <Link href="/menu?filter=breakfast" className="text-red-600 hover:text-red-700 font-medium">
+                <Link href="/menu?filter=Breakfast" className="text-red-600 hover:text-red-700 font-medium">
                   View Menu →
                 </Link>
               </div>
@@ -66,7 +67,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
                   <Image
                     src="/placeholder.svg?height=400&width=600"
-                    alt="Mexican Lunch"
+                    alt="Lunch and Dinner"
                     width={600}
                     height={400}
                     className="object-cover h-full w-full"
@@ -74,11 +75,11 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Mexican Lunch</h3>
+                <h3 className="text-xl font-semibold mb-2">Lunch and Dinner</h3>
                 <p className="text-gray-600 mb-4">
-                  Authentic tacos al pastor with homemade tortillas and fresh salsas.
+                  Experience the soul of Latin America—every dish blends cherished traditions with bold, modern flavors.
                 </p>
-                <Link href="/menu?filter=lunch" className="text-red-600 hover:text-red-700 font-medium">
+                <Link href="/menu?filter=Lunch%20Special" className="text-red-600 hover:text-red-700 font-medium">
                   View Menu →
                 </Link>
               </div>
@@ -97,12 +98,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">American Dinner</h3>
+                <h3 className="text-xl font-semibold mb-2">Catering</h3>
                 <p className="text-gray-600 mb-4">
-                  Classic burger with a Latin twist, served with seasoned fries and coleslaw.
+                  Spice up your event with authentic Latin flavors!
+                  Perfect for weddings, offices, and parties that love real sabor!
                 </p>
-                <Link href="/menu?filter=dinner" className="text-red-600 hover:text-red-700 font-medium">
-                  View Menu →
+                <Link href="/catering" className="text-red-600 hover:text-red-700 font-medium">
+                  Get a Taste of Latin America →
                 </Link>
               </div>
             </div>

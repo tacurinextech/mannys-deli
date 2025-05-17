@@ -59,7 +59,8 @@ export default function ContactPage() {
                   <Phone className="text-red-600 mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-gray-600">{config.COMPANY.PHONE}</p>
+                    <p className="text-gray-600">{config.COMPANY.PHONE1}</p>
+                    <p className="text-gray-600">{config.COMPANY.PHONE2}</p>
                   </div>
                 </div>
 
@@ -82,9 +83,20 @@ export default function ContactPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-semibold mb-4">Location</h2>
+              <h2 className="text-2xl font-semibold mb-4">Find Us</h2>
               <div className="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                <p className="text-gray-500">Map would be displayed here</p>
+                <div className="w-full h-[300px]">
+                    <iframe
+                        width="100%"
+                        height="600"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=28%20Bouton%20Street,%20Norwalk,%20CT%2006854+(Manny's%20Deli)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        title="3 Tiny Steps Home Daycare Location"
+                        loading="lazy"
+                        className="w-full h-full border-0"
+                        allowFullScreen
+                        aria-hidden="false"
+                    ></iframe>
+                  </div>
               </div>
             </div>
           </div>
@@ -97,8 +109,8 @@ export default function ContactPage() {
               <div>
                 <p className="font-medium">Important Note:</p>
                 <p>
-                  Please do not use this contact form to place food orders. For immediate service, call us directly at
-                  {config.COMPANY.PHONE} or use the "Order Online" button to order through Uber Eats.
+                  Please do not use this contact form to place food orders. For immediate service, call us directly 
+                  at {config.COMPANY.PHONE1}, {config.COMPANY.PHONE2} or use the "Order Online" button to order online.
                 </p>
               </div>
             </div>
