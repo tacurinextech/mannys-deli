@@ -1,7 +1,8 @@
 const dev = {
     COMPANY: {
       NAME: "[DEV] Manny's Deli",
-      PHONE: "+1 (203)-857-1870",
+      PHONE1: "+1 (203)-857-1870",
+      PHONE2: "+1 (203)-952-3374",
       EMAIL: "mannysdeli@gmail.com",
       URL: "www.mannysdeli.com",
       FACEBOOK: 'https://www.facebook.com/mannysdeli?mibextid=wwXIfr',
@@ -14,7 +15,8 @@ const dev = {
   const prod = {
     COMPANY: {
       NAME: "Manny's Deli",
-      PHONE: "+1 (203)-857-1870",
+      PHONE1: "+1 (203)-857-1870",
+      PHONE2: "+1 (203)-952-3374",
       EMAIL: "mannysdeli@gmail.com",
       URL: "www.mannysdeli.com",
       FACEBOOK: 'https://www.facebook.com/mannysdeli?mibextid=wwXIfr',
