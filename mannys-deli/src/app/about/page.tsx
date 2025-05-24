@@ -11,7 +11,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
             <div className="h-120 relative">
               <Image
-                src="/img/restaurant_photo.jpg?height=600&width=1200"
+                src= "/img/restaurant_photo.jpg?height=600&width=1200"
                 alt={config.COMPANY.NAME}
                 width={100}
                 height={600}
