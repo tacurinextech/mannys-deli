@@ -7,8 +7,8 @@ import { X } from "lucide-react"
 const BANNER_CONFIG = {
   show: true, // Set to false to hide the banner completely
   promotion: {
-    title: "Weekly Special!",
-    description: "Buy any lunch combo and get a free drink. Valid Monday-Friday, 11am-2pm.",
+    title: "Lunch Special!",
+    description: "Soup of the day with a side of rice, beans, today's beef special and a canned soda. Valid Monday-Friday, 11am-2pm.",
     backgroundColor: "bg-amber-500",
     textColor: "text-white",
     closeButtonAriaLabel: "Close promotion banner"

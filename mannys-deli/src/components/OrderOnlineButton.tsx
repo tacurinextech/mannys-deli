@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { ShoppingBag, ChevronUp } from "lucide-react"
+import { config } from "../../config/constants"
 
 export function OrderOnlineButton() {
   const [isOpen, setIsOpen] = useState(false)
@@ -28,18 +29,23 @@ export function OrderOnlineButton() {
 
   const deliveryOptions = [
     {
+      name: "Phone",
+      url: `tel:${config.COMPANY.PHONE1}`, // Replace with actual Uber Eats link
+      color: "bg-red-600 hover:bg-red-700",
+    },
+    {
       name: "Uber Eats",
-      url: "https://www.ubereats.com", // Replace with actual Uber Eats link
+      url: "https://www.ubereats.com/store/mannys-deli/N7YU8HEYU5yVJu5IkAUqTg?srsltid=AfmBOopMy5-IuCZERH5WTOXAP8pogAsXpxK93tg_MYsUKH-KWEB-Aok_",
       color: "bg-black hover:bg-gray-800",
     },
     {
       name: "GrubHub",
-      url: "https://www.grubhub.com", // Replace with actual GrubHub link
+      url: "https://www.grubhub.com/restaurant/mannys-deli-28-bouton-st-norwalk/4509184",
       color: "bg-orange-600 hover:bg-orange-700",
     },
     {
       name: "DoorDash",
-      url: "https://www.doordash.com", // Replace with actual DoorDash link
+      url: "https://www.doordash.com/store/manny's-deli-norwalk-24784814/20144966/?srsltid=AfmBOoqcG8g9hFDSajYU1TE-_b6rW2HA6sJtBtMvGmCeTc3glDa3ZPbG",
       color: "bg-red-600 hover:bg-red-700",
     },
   ]
@@ -71,7 +77,7 @@ export function OrderOnlineButton() {
         }`}
       >
         <ShoppingBag size={20} />
-        <span>Order Online</span>
+        <span>Order Now</span>
         {isOpen && <ChevronUp size={16} />}
       </button>
     </div>

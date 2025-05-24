@@ -6,7 +6,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center">About {config.COMPANY.NAME}</h1>
+          <h1 className="text-4xl font-bold mb-8 text-center dark:text-black">About {config.COMPANY.NAME}</h1>
 
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
             <div className="h-120 relative">
@@ -19,7 +19,7 @@ export default function AboutPage() {
               />
             </div>
             <div className="p-8">
-              <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
+              <h2 className="text-2xl font-semibold mb-4 dark:text-black">Our Story</h2>
               <p className="text-gray-700 mb-4">
                 {config.COMPANY.NAME} was founded in 2014 by Rolando Tacuri, a chef with a bold vision: to unite the vibrant 
                 flavors of Latin America under one roof. Born in Ecuador and trained alongside cooks from across the region, 
@@ -46,7 +46,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-semibold mb-4">Our Ingredients</h2>
+              <h2 className="text-2xl font-semibold mb-4 dark:text-black">Our Ingredients</h2>
               <p className="text-gray-700 mb-4">
                 We take pride in sourcing the freshest ingredients for our dishes. Whenever possible, we work with local
                 farmers and suppliers to ensure quality and sustainability.
@@ -57,26 +57,25 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-semibold mb-4">Our Team</h2>
+              <h2 className="text-2xl font-semibold mb-4 dark:text-black">Our Team</h2>
               <p className="text-gray-700 mb-4">
                 Our kitchen is staffed by talented chefs from diverse backgrounds, each bringing their own cultural
                 expertise and passion for cooking to {config.COMPANY.NAME}.
               </p>
               <p className="text-gray-700">
-                From our front-of-house staff to our kitchen team, we're united by our love of good food and commitment
-                to excellent service.
+                {"From our front-of-house staff to our kitchen team, we're united by our love of good food and commitment to excellent service."}
               </p>
             </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-8 text-center">
-            <h2 className="text-2xl font-semibold mb-4">Visit Us Today</h2>
+            <h2 className="text-2xl font-semibold mb-4 dark:text-black">Visit Us Today</h2>
             <p className="text-gray-700 mb-6">
-              We invite you to experience the unique flavors of {config.COMPANY.NAME}. Whether you're in the mood for a
-              hearty breakfast, a quick lunch, or a satisfying dinner, we have something for everyone.
+              {`We invite you to experience the unique flavors of ${config.COMPANY.NAME}. Whether you're in the mood for a
+              hearty breakfast, a quick lunch, or a satisfying dinner, we have something for everyone.`}
             </p>
             <p className="text-xl font-medium text-red-600">
-              "Good food is the foundation of genuine happiness." - Rolando Tacuri
+              {`"Good food is the foundation of genuine happiness." - Rolando Tacuri`}
             </p>
           </div>
         </div>

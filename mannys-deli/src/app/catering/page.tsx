@@ -3,20 +3,31 @@
 import { useState } from "react"
 import Image from "next/image"
 import { config } from "../../../config/constants"
-import { cateringItems } from "@/lib/data"
+import { cateringItems } from "@/lib/menu_and_catering"
+import Link from "next/link"
+
+// Define a type for the possible filter values
+type CategoryFilter = 
+  |"All" 
+  |"Arroz" 
+  |"Carne" 
+  |"Pollo" 
+  |"Ensalada" 
+  |"Pasta" 
+  |"Varios"
 
 export default function CateringPage() {
-  const [activeFilter, setActiveFilter] = useState<"All" | "Meats" | "Specialty Dishes" | "Salads" | "Other">("All")
+  const [activeFilter, setActiveFilter] = useState<CategoryFilter>("All")
 
   // Get unique categories for filter buttons
-  const categories = Array.from(new Set(cateringItems.map((item) => item.category)))
+  const categories = Array.from(new Set(cateringItems.map((item) => item.category))) as CategoryFilter[]
 
   // Filter items based on active filter
   const filteredItems =
     activeFilter === "All" ? cateringItems : cateringItems.filter((item) => item.category === activeFilter)
 
-  // Create filter buttons data
-  const filterButtons = [
+  // Create filter buttons data with proper typing
+  const filterButtons: { label: string; value: CategoryFilter }[] = [
     { label: "All", value: "All" },
     ...categories.map((category) => ({ label: category, value: category })),
   ]
@@ -25,10 +36,10 @@ export default function CateringPage() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Catering Services</h1>
+          <h1 className="text-4xl font-bold mb-4 dark:text-black">Catering Services</h1>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Let {config.COMPANY.NAME} cater your next event with our delicious multicultural cuisine. We offer a variety of
-            options to suit any occasion, from small gatherings to large celebrations.
+            {`Let ${config.COMPANY.NAME} cater your next event with our delicious multicultural cuisine. We offer a variety of
+            options to suit any occasion, from small gatherings to large celebrations.`}
           </p>
 
           {/* Filter Buttons */}
@@ -36,7 +47,7 @@ export default function CateringPage() {
             {filterButtons.map((button) => (
               <button
                 key={button.value}
-                onClick={() => setActiveFilter(button.value as any)}
+                onClick={() => setActiveFilter(button.value)}
                 className={`px-4 py-2 rounded-full transition-colors ${
                   activeFilter === button.value
                     ? "bg-amber-600 text-white"
@@ -48,11 +59,11 @@ export default function CateringPage() {
             ))}
           </div>
 
+          {/* Rest of your component remains the same */}
           <div className="bg-amber-50 border border-amber-200 text-amber-800 p-4 rounded-lg mb-6 max-w-2xl mx-auto">
             <p className="font-medium">Ordering Information:</p>
             <p>
-              Please place catering orders at least 48 hours in advance. Call us at {config.COMPANY.PHONE1} or visit us in person to
-              place your order. A 50% deposit is required for all catering orders.
+              {"Please place catering orders at least 48 hours in advance. Call us at"} <span><Link href={`tel:${config.COMPANY.PHONE1}`}>{config.COMPANY.PHONE1}</Link></span> {"or visit us in person to place your order. A 50% deposit is required for all catering orders."}
             </p>
           </div>
         </div>
@@ -82,18 +93,18 @@ export default function CateringPage() {
                 </div>
               </div>
               <div className="md:w-2/3 p-6">
-                <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                <h3 className="text-xl font-semibold mb-2 dark:text-black">{item.name}</h3>
                 <p className="text-gray-600 mb-4">{item.description}</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <h4 className="font-medium text-sm text-gray-500">Medium Tray</h4>
                     <p className="font-bold text-amber-600">{item.mediumTray.price}</p>
-                    <p className="text-sm text-gray-600">Serves {item.mediumTray.serves}</p>
+                    {/* <p className="text-sm text-gray-600">Serves {item.mediumTray.serves}</p> */}
                   </div>
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <h4 className="font-medium text-sm text-gray-500">Large Tray</h4>
                     <p className="font-bold text-amber-600">{item.largeTray.price}</p>
-                    <p className="text-sm text-gray-600">Serves {item.largeTray.serves}</p>
+                    {/* <p className="text-sm text-gray-600">Serves {item.largeTray.serves}</p> */}
                   </div>
                 </div>
               </div>
@@ -103,27 +114,27 @@ export default function CateringPage() {
 
         {/* Additional Information */}
         <div className="bg-white rounded-lg shadow-md p-8 mt-12">
-          <h2 className="text-2xl font-bold mb-4">Additional Information</h2>
+          <h2 className="text-2xl font-bold mb-4 dark:text-black">Additional Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-2">Delivery Options</h3>
+              <h3 className="text-lg font-semibold mb-2 dark:text-black">Delivery Options</h3>
               <p className="text-gray-600 mb-4">
                 We offer delivery for catering orders within a 15-mile radius. Delivery fee varies based on distance and
                 order size.
               </p>
-              <h3 className="text-lg font-semibold mb-2">Setup Services</h3>
+              <h3 className="text-lg font-semibold mb-2 dark:text-black">Setup Services</h3>
               <p className="text-gray-600">
                 Full-service setup and staffing is available for an additional fee. Please inquire for details and
                 pricing.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2">Special Dietary Needs</h3>
+              <h3 className="text-lg font-semibold mb-2 dark:text-black">Special Dietary Needs</h3>
               <p className="text-gray-600 mb-4">
                 We can accommodate vegetarian, vegan, and gluten-free dietary restrictions. Please let us know your
                 requirements when placing your order.
               </p>
-              <h3 className="text-lg font-semibold mb-2">Custom Menus</h3>
+              <h3 className="text-lg font-semibold mb-2 dark:text-black">Custom Menus</h3>
               <p className="text-gray-600">
                 Don&apos;t see what you&apos;re looking for? We can create custom menus for your specific event. Contact
                 us to discuss your needs.
