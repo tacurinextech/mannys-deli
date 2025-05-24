@@ -13,7 +13,7 @@ export default function AboutPage() {
               <Image
                 src= "/img/restaurant_photo.jpg?height=600&width=1200"
                 alt={config.COMPANY.NAME}
-                width={100}
+                width={1200}
                 height={600}
                 quality={90}
                 priority={true} // Important for above-the-fold images
