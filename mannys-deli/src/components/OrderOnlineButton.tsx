@@ -29,9 +29,9 @@ export function OrderOnlineButton() {
 
   const deliveryOptions = [
     {
-      name: "Phone",
+      name: "(203) 857-1870",
       url: `tel:${config.COMPANY.PHONE1}`, // Replace with actual Uber Eats link
-      color: "bg-red-600 hover:bg-red-700",
+      color: "bg-green-600 hover:bg-green-700",
     },
     {
       name: "Uber Eats",
