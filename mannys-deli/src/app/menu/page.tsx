@@ -98,23 +98,6 @@ function MenuContent() {
             }
           </p>
 
-          {/* Filter Buttons */}
-          {/* <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {filterButtons.map((button) => (
-              <button
-                key={button.value}
-                onClick={() => setActiveFilter(button.value)}
-                className={`px-4 py-2 rounded-full transition-colors ${
-                  activeFilter === button.value
-                    ? "bg-amber-600 text-white"
-                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                }`}
-              >
-                {button.label}
-              </button>
-            ))}
-          </div> */}
-
           <div className="sticky top-16 z-40 bg-gray-50 py-4 -mx-4 px-4 mb-8">
             <div className="flex items-center gap-2 max-w-4xl mx-auto">
               {/* Scroll Left Button */}
@@ -123,7 +106,7 @@ function MenuContent() {
                 className="flex-shrink-0 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-shadow cursor-pointer"
                 aria-label="Scroll filters left"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={20} color="black"/>
               </button>
 
               {/* Scrollable Filter Container */}
@@ -153,7 +136,7 @@ function MenuContent() {
                 className="flex-shrink-0 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-shadow cursor-pointer"
                 aria-label="Scroll filters right"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={20} color="black"/>
               </button>
 
               {/* Show All Filters Button */}
